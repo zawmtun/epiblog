@@ -2,6 +2,7 @@ theme = "tale-hugo"
 baseURL = "https://zawmyotun.netlify.app"
 languageCode = "en-us"
 title = "Zaw Myo Tun"
+paginate = 5
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [menu]
@@ -9,13 +10,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     identifier = "about"
     name = "About"
     title = "About"
-    url = "/about/"
+    url = "/about/about"
     weight = 1
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
     title = "Posts"
-    url = "/posts/"
+    url = "/post/"
     weight = 2
   [[menu.main]]
     identifier = "github"
