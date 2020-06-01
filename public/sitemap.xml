@@ -3,77 +3,82 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/census/</loc>
+    <loc>/tags/census/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/data-analysis/</loc>
+    <loc>/categories/data-analysis/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/myanmar/</loc>
+    <loc>/tags/myanmar/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</loc>
+    <loc>/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/network-analysis/</loc>
+    <loc>/tags/network-analysis/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/</loc>
+    <loc>/post/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/r/</loc>
+    <loc>/tags/r/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/2015-07-23-r-rmarkdown/</loc>
+    <loc>/about/</loc>
+    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2015-07-23-r-rmarkdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/plot/</loc>
+    <loc>/tags/plot/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/r/</loc>
+    <loc>/categories/r/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/r-markdown/</loc>
+    <loc>/tags/r-markdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/regression/</loc>
+    <loc>/tags/regression/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   

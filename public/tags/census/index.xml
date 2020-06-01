@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>census on Zaw Myo Tun</title>
-    <link>http://example.org/tags/census/</link>
+    <link>/tags/census/</link>
     <description>Recent content in census on Zaw Myo Tun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/census/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/census/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Myanmar Census 2014: Migration patterns among states and regions</title>
-      <link>http://example.org/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</link>
+      <link>/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</guid>
+      <guid>/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</guid>
       <description>The latest Myanmar population and household census was conducted in March 2014 by the Ministry of Immigration and Population. It was the first national census since 1983. The aim was to count every person in the country on 29 March 2014 (census night) and to collect demographic, social, and economic data.
 In this analysis, I looked at migration between states and regions in Myanmar. Myanmar is administratively divided into 7 states, 7 regions, one union territory, 5 self-administered zones, and one self-administered division.</description>
     </item>

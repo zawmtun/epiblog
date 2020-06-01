@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Zaw Myo Tun</title>
-    <link>http://example.org/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Zaw Myo Tun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Myanmar Census 2014: Migration patterns among states and regions</title>
-      <link>http://example.org/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</link>
+      <link>/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</guid>
+      <guid>/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</guid>
       <description>The latest Myanmar population and household census was conducted in March 2014 by the Ministry of Immigration and Population. It was the first national census since 1983. The aim was to count every person in the country on 29 March 2014 (census night) and to collect demographic, social, and economic data.
 In this analysis, I looked at migration between states and regions in Myanmar. Myanmar is administratively divided into 7 states, 7 regions, one union territory, 5 self-administered zones, and one self-administered division.</description>
     </item>
     
     <item>
       <title>Hello R Markdown</title>
-      <link>http://example.org/post/2015-07-23-r-rmarkdown/</link>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>http://example.org/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>

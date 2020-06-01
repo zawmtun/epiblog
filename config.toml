@@ -1,6 +1,37 @@
 theme = "tale-hugo"
-baseURL = "http://example.org/"
+baseURL = "https://zawmyotun.netlify.app"
 languageCode = "en-us"
 title = "Zaw Myo Tun"
-
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    title = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    identifier = "github"
+    name = "GitHub"
+    title = "GitHub"
+    url = "https://github.com/zawmtun"
+    weight = 3
+  [[menu.main]]
+    identifier = "twitter"
+    name = "Twitter"
+    title = "Twitter"
+    url = "https://twitter.com/zawmtun"
+    weight = 4
+  [[menu.main]]
+    identifier = "linkedin"
+    name = "LinkedIn"
+    title = "LinkedIn"
+    url = "www.linkedin.com/in/zawmyotun11"
+    weight = 5
