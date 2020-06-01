@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Myanmar Census 2014: Migration patterns among states and regions &middot; Zaw Myo Tun</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Zaw Myo Tun" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">Zaw Myo Tun</h2>
+				</a>
+				<ul>
+    
+    
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        Zaw Myo Tun
+        <br>
+        <span>on&nbsp;</span><time datetime="2020-06-01 00:00:00 &#43;0000 UTC">June 1, 2020</time>
+</div>
+		<h1 class="post-title">Myanmar Census 2014: Migration patterns among states and regions</h1>
+<div class="post-line"></div>
+
+		
+
+		
+
+
+<p>The latest <a href="https://www.dop.gov.mm/en/population-censuses-myanmar">Myanmar population and household census</a> was conducted in March 2014 by the Ministry of Immigration and Population. It was the first national census since 1983. The aim was to count every person in the country on 29 March 2014 (census night) and to collect demographic, social, and economic data.</p>
+<p>In this analysis, I looked at migration between states and regions in Myanmar. Myanmar is administratively divided into 7 states, 7 regions, one union territory, 5 self-administered zones, and one self-administered division. Data were available for states, regions, and the union territory.</p>
+<p>I used data from a table of aggregated numbers in which the state/region of usual residence was tabulated against previous residence or place of birth, segregated by sex. In addition, people were also asked the main reasons for the migration. These data were collected using a household questionnaire from almost 11 million conventional households. The data table (xlsx, 52 KB) is <a href="http://www.dop.gov.mm/sites/dop.gov.mm/files/datamap-documents/union_eng_group_c.xlsx">available</a> on the Ministry of Immigration and Population website. The main census report (pdf, 16 MB) can be downloaded <a href="http://www.dop.gov.mm/sites/dop.gov.mm/files/publication_docs/census_main_report_union_-_english_2.pdf">here</a>.</p>
+<div id="network-analysis" class="section level2">
+<h2>Network analysis</h2>
+<p>Migration was inferred if the previous residence or birth place (state/region) reported by a person is different from his or her usual residence. I constructed networks based on the migration data using nodes and directed edges. Nodes represent the state/region while edges represent migration with the direction of the arrow pointing to the destination state/region. Edges are weighted by the number of migrants.</p>
+<p>Two networks were constructed: one for migrating from previous residence to usual residence, and another from birth place to usual residence. The former may be interpreted as recent migration patterns while the latter can be thought of as cumulative trend over longer time period although each interpretation has limitations.</p>
+<p>Both networks were completed connected as population movements happened across all states/regions. To understand how connected the nodes are, I ranked them based on their reported population influx and outflow. In addition, I calculated <em>migratory flux</em> for each state/region, defined as the number of population inflow divided by outflow; a value of one means that the volume of migrant inflow and outflow are balanced. A value smaller than one means that there were more people moving out than moving in and vice versa if the value is greater than one.</p>
+<p>Below are network representations in which I used circles and arrows to represent nodes and edges, respectively. The node size corresponds to their migratory flux values. The node colour represents the group the node belongs to based on a grouping algorithm (See below for more details). The edge width represents the volume of migrants and their colours are the same as the nodes they emerge from. For clarity, colours were added only to the edges that represents 50,000 or more migrants. All other edges were gray-ed. </p>
+<p><img src="/post/2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Migration patterns of both networks were very similar with almost identical main features. In both networks, Yangon received the highest volume of migrants from many states and region with most migrants moved from Ayeyawady and Bago regions. Top three states/regions with the highest influx of migrants were Yangon, Mandalay, and Shan while the top three with the highest outflow were Ayeyawady, Bago, and Mandalay. Migratory flux is highest in Yangon, Kayin, and Nay Pyi Taw and lowest in Ayeyawady, Chin, and Magway.</p>
+<p>The migration patterns within each network were diverse. Yangon is the most populated region in the country and is where the commercial capital is located. With the highest migratory flux value, recent migration patterns show that Yangon Region has received migrants almost four times as many as its population outflow. Mandalay Region has one of the highest population both population inflow and outflow. With a migratory flux of approximately one, Mandalay Region has a very high population turnover. I observed similar migration patterns between men and women when the data were analysed separately (results not shown).</p>
+<p>The table below shows the number of migrants moving in and out of each state/region, sorted by the migratory flux.</p>
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#enwrdybdsr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#enwrdybdsr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#enwrdybdsr .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#enwrdybdsr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#enwrdybdsr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#enwrdybdsr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#enwrdybdsr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#enwrdybdsr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#enwrdybdsr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#enwrdybdsr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#enwrdybdsr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#enwrdybdsr .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#enwrdybdsr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#enwrdybdsr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#enwrdybdsr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#enwrdybdsr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#enwrdybdsr .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#enwrdybdsr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#enwrdybdsr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#enwrdybdsr .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#enwrdybdsr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#enwrdybdsr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#enwrdybdsr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#enwrdybdsr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#enwrdybdsr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#enwrdybdsr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#enwrdybdsr .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#enwrdybdsr .gt_left {
+  text-align: left;
+}
+
+#enwrdybdsr .gt_center {
+  text-align: center;
+}
+
+#enwrdybdsr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#enwrdybdsr .gt_font_normal {
+  font-weight: normal;
+}
+
+#enwrdybdsr .gt_font_bold {
+  font-weight: bold;
+}
+
+#enwrdybdsr .gt_font_italic {
+  font-style: italic;
+}
+
+#enwrdybdsr .gt_super {
+  font-size: 65%;
+}
+
+#enwrdybdsr .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="enwrdybdsr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_center gt_columns_bottom_border" rowspan="2" colspan="1"><strong>State/region</strong></th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3">
+        <span class="gt_column_spanner"><strong>From previous residence<br />to usual residence</strong></span>
+      </th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3">
+        <span class="gt_column_spanner"><strong>From place of birth<br />to usual residence</strong></span>
+      </th>
+    </tr>
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Population influx</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Population outflow</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Migratory flux</strong><sup class="gt_footnote_marks">1</sup></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Population influx</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Population outflow</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Migratory flux</strong><sup class="gt_footnote_marks">1</sup></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_left">Yangon</td>
+      <td class="gt_row gt_right">1,391,057</td>
+      <td class="gt_row gt_right">351,797</td>
+      <td class="gt_row gt_right">3.95</td>
+      <td class="gt_row gt_right">2,048,643</td>
+      <td class="gt_row gt_right">349,059</td>
+      <td class="gt_row gt_right">5.87</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Kayin</td>
+      <td class="gt_row gt_right">168,676</td>
+      <td class="gt_row gt_right">54,527</td>
+      <td class="gt_row gt_right">3.09</td>
+      <td class="gt_row gt_right">200,007</td>
+      <td class="gt_row gt_right">64,459</td>
+      <td class="gt_row gt_right">3.10</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Nay Pyi Taw</td>
+      <td class="gt_row gt_right">193,500</td>
+      <td class="gt_row gt_right">81,339</td>
+      <td class="gt_row gt_right">2.38</td>
+      <td class="gt_row gt_right">225,752</td>
+      <td class="gt_row gt_right">74,312</td>
+      <td class="gt_row gt_right">3.04</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Kachin</td>
+      <td class="gt_row gt_right">205,371</td>
+      <td class="gt_row gt_right">94,204</td>
+      <td class="gt_row gt_right">2.18</td>
+      <td class="gt_row gt_right">237,262</td>
+      <td class="gt_row gt_right">100,239</td>
+      <td class="gt_row gt_right">2.37</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Tanintharyi</td>
+      <td class="gt_row gt_right">86,879</td>
+      <td class="gt_row gt_right">51,435</td>
+      <td class="gt_row gt_right">1.69</td>
+      <td class="gt_row gt_right">110,644</td>
+      <td class="gt_row gt_right">60,177</td>
+      <td class="gt_row gt_right">1.84</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Kayah</td>
+      <td class="gt_row gt_right">32,732</td>
+      <td class="gt_row gt_right">20,832</td>
+      <td class="gt_row gt_right">1.57</td>
+      <td class="gt_row gt_right">38,687</td>
+      <td class="gt_row gt_right">21,889</td>
+      <td class="gt_row gt_right">1.77</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Shan</td>
+      <td class="gt_row gt_right">331,822</td>
+      <td class="gt_row gt_right">216,617</td>
+      <td class="gt_row gt_right">1.53</td>
+      <td class="gt_row gt_right">398,749</td>
+      <td class="gt_row gt_right">244,687</td>
+      <td class="gt_row gt_right">1.63</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Mandalay</td>
+      <td class="gt_row gt_right">499,655</td>
+      <td class="gt_row gt_right">457,930</td>
+      <td class="gt_row gt_right">1.09</td>
+      <td class="gt_row gt_right">604,415</td>
+      <td class="gt_row gt_right">577,846</td>
+      <td class="gt_row gt_right">1.05</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Mon</td>
+      <td class="gt_row gt_right">127,749</td>
+      <td class="gt_row gt_right">198,358</td>
+      <td class="gt_row gt_right">0.64</td>
+      <td class="gt_row gt_right">164,539</td>
+      <td class="gt_row gt_right">284,599</td>
+      <td class="gt_row gt_right">0.58</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Sagaing</td>
+      <td class="gt_row gt_right">211,019</td>
+      <td class="gt_row gt_right">360,813</td>
+      <td class="gt_row gt_right">0.58</td>
+      <td class="gt_row gt_right">235,213</td>
+      <td class="gt_row gt_right">454,463</td>
+      <td class="gt_row gt_right">0.52</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Bago</td>
+      <td class="gt_row gt_right">228,112</td>
+      <td class="gt_row gt_right">493,340</td>
+      <td class="gt_row gt_right">0.46</td>
+      <td class="gt_row gt_right">240,075</td>
+      <td class="gt_row gt_right">680,370</td>
+      <td class="gt_row gt_right">0.35</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Rakhine</td>
+      <td class="gt_row gt_right">35,161</td>
+      <td class="gt_row gt_right">140,187</td>
+      <td class="gt_row gt_right">0.25</td>
+      <td class="gt_row gt_right">39,890</td>
+      <td class="gt_row gt_right">200,776</td>
+      <td class="gt_row gt_right">0.20</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Magway</td>
+      <td class="gt_row gt_right">94,788</td>
+      <td class="gt_row gt_right">417,252</td>
+      <td class="gt_row gt_right">0.23</td>
+      <td class="gt_row gt_right">104,280</td>
+      <td class="gt_row gt_right">564,060</td>
+      <td class="gt_row gt_right">0.18</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Ayeyawady</td>
+      <td class="gt_row gt_right">116,603</td>
+      <td class="gt_row gt_right">720,431</td>
+      <td class="gt_row gt_right">0.16</td>
+      <td class="gt_row gt_right">126,341</td>
+      <td class="gt_row gt_right">1,018,461</td>
+      <td class="gt_row gt_right">0.12</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Chin</td>
+      <td class="gt_row gt_right">11,827</td>
+      <td class="gt_row gt_right">75,889</td>
+      <td class="gt_row gt_right">0.16</td>
+      <td class="gt_row gt_right">12,666</td>
+      <td class="gt_row gt_right">91,766</td>
+      <td class="gt_row gt_right">0.14</td>
+    </tr>
+  </tbody>
+  
+  <tfoot>
+    <tr class="gt_footnotes">
+      <td colspan="7">
+        <p class="gt_footnote">
+          <sup class="gt_footnote_marks">
+            <em>1</em>
+          </sup>
+           
+          Overall number of migrants moving in divided by those moving out of a state/region
+          <br />
+        </p>
+      </td>
+    </tr>
+  </tfoot>
+</table></div>
+</div>
+<div id="data-driven-grouping-of-the-states-and-regions" class="section level2">
+<h2>Data-driven grouping of the states and regions</h2>
+<p>I used a data-driven technique called <a href="https://en.wikipedia.org/wiki/Hierarchical_clustering"><em>hierarchical clustering</em></a> and grouped the states and regions. It is an iterative process in which highly connected nodes are merged together using fast-greedy algorithm. Through this process, the group membership is determined by maximising the node connectedness within the group while minimising the connectedness between the groups.</p>
+<p>Two groups of states/regions emerged from this analysis. Interestingly, the states/regions in each group were geographically proximal to each together with one group located in the south around the coastal region and the other located in-land in the north.</p>
+<p>This grouping pattern is robust and consistent in both networks, in overall analysis and in subgroup analysis by sex (results not shown).</p>
+<p><img src="/post/2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions_files/figure-html/unnamed-chunk-4-1.png" width="864" /></p>
+<p>According to the main census report, most people appear to move for economic reasons; 41% of migrants (majority were women) cited following families and 34% (mostly men) cited employment as the main reasons (See the plot below). Therefore, the two distinct migration patterns may suggest distinct ways of organising the economy. More data are necessary to look at this further.</p>
+<div class="figure">
+<img src="/post/2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions_files/census_2014_reasons_for_migration.png" alt="" />
+<p class="caption"><strong>Main reasons for migration (screenshot from the census main report)</strong></p>
+</div>
+</div>
+<div id="caveats" class="section level2">
+<h2>Caveats</h2>
+<p>We need to have some caveats in mind while interpreting the data. These data do not include population in “institutional household”: for example, old-people’s homes, orphanages, hospitals, boarding schools, hotels, hostels and guest houses, institutions for persons with disabilities, prisons, monasteries, convents, military and police barracks, and camps for workers.</p>
+<p>Another caveat is the lack of information on the timeframe of migration. Without this information, it is difficult to interpret the recency of these patterns and how they change over time.</p>
+</div>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/post/2015-07-23-r-rmarkdown/" class="left arrow">&#8592;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2020-06-01 18:31:14.9143782 &#43;0800 &#43;08 m=&#43;0.225541301">2020</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

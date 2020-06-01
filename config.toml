@@ -1,0 +1,5 @@
+theme = "tale-hugo"
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Zaw Myo Tun"
+
