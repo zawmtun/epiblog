@@ -1,5 +1,5 @@
 ---
-title: 'Myanmar Census 2014: Migration patterns among states and regions'
+title: 'Migration patterns among states and regions in Myanmar: network analysis using census data'
 author: Zaw Myo Tun
 date: '2020-06-01'
 slug: myanmar-census-2014-migration-patterns-among-states-and-regions
