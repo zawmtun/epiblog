@@ -23,7 +23,7 @@ tags:
 <p>Two networks were constructed: one for migrating from previous residence to usual residence, and another from birth place to usual residence. The former may be interpreted as recent migration patterns while the latter can be thought of as cumulative trend over longer time period although each interpretation has limitations.</p>
 <p>Both networks were completely connected as population movements happened across all states/regions. To understand how connected the nodes are, I ranked them based on their reported population influx and outflow. In addition, I calculated <em>migratory flux</em> for each state/region, defined as the number of population inflow divided by outflow; a value of one means that the volume of migrant inflow and outflow are balanced. A value smaller than one means that there were more people moving out than moving in and vice versa if the value is greater than one.</p>
 <p>Below are network representations in which I used circles and arrows to represent nodes and edges, respectively. The node size corresponds to their migratory flux values. The node colour represents the group the node belongs to based on a grouping algorithm (See below for more details). The edge width represents the volume of migrants and their colours are the same as the nodes they emerge from. For clarity, colours were added only to the edges that represents 50,000 or more migrants. All other edges were gray-ed. </p>
-<p><img src="/post/2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="/post/2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions_files/network.png" /></p>
 <p>Migration patterns of both networks were very similar with almost identical main features. In both networks, Yangon received the highest volume of migrants from many states and region with most migrants moved from Ayeyawady and Bago regions. Top three states/regions with the highest influx of migrants were Yangon, Mandalay, and Shan while the top three with the highest outflow were Ayeyawady, Bago, and Mandalay. Migratory flux is highest in Yangon, Kayin, and Nay Pyi Taw and lowest in Ayeyawady, Chin, and Magway.</p>
 <p>The migration patterns within each network were diverse. Yangon is the most populated region in the country and is where the commercial capital is located. With the highest migratory flux value, recent migration patterns show that Yangon Region has received migrants almost four times as many as its population outflow. Mandalay Region has one of the highest in both population inflow and outflow. With a migratory flux of approximately one, Mandalay Region has a very high population turnover. I observed similar migration patterns between men and women when the data were analysed separately (results not shown).</p>
 <p>The table below shows the number of migrants moving in and out of each state/region, sorted by the migratory flux.</p>
@@ -31,7 +31,7 @@ tags:
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#ejashnknmw .gt_table {
+#inmoqlbrpl .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -54,7 +54,7 @@ tags:
   border-left-color: #D3D3D3;
 }
 
-#ejashnknmw .gt_heading {
+#inmoqlbrpl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -66,7 +66,7 @@ tags:
   border-right-color: #D3D3D3;
 }
 
-#ejashnknmw .gt_title {
+#inmoqlbrpl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -76,7 +76,7 @@ tags:
   border-bottom-width: 0;
 }
 
-#ejashnknmw .gt_subtitle {
+#inmoqlbrpl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -86,13 +86,13 @@ tags:
   border-top-width: 0;
 }
 
-#ejashnknmw .gt_bottom_border {
+#inmoqlbrpl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ejashnknmw .gt_col_headings {
+#inmoqlbrpl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -107,7 +107,7 @@ tags:
   border-right-color: #D3D3D3;
 }
 
-#ejashnknmw .gt_col_heading {
+#inmoqlbrpl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -127,7 +127,7 @@ tags:
   overflow-x: hidden;
 }
 
-#ejashnknmw .gt_column_spanner_outer {
+#inmoqlbrpl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -139,15 +139,15 @@ tags:
   padding-right: 4px;
 }
 
-#ejashnknmw .gt_column_spanner_outer:first-child {
+#inmoqlbrpl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ejashnknmw .gt_column_spanner_outer:last-child {
+#inmoqlbrpl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ejashnknmw .gt_column_spanner {
+#inmoqlbrpl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -159,7 +159,7 @@ tags:
   width: 100%;
 }
 
-#ejashnknmw .gt_group_heading {
+#inmoqlbrpl .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -181,7 +181,7 @@ tags:
   vertical-align: middle;
 }
 
-#ejashnknmw .gt_empty_group_heading {
+#inmoqlbrpl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -196,19 +196,19 @@ tags:
   vertical-align: middle;
 }
 
-#ejashnknmw .gt_striped {
+#inmoqlbrpl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ejashnknmw .gt_from_md > :first-child {
+#inmoqlbrpl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ejashnknmw .gt_from_md > :last-child {
+#inmoqlbrpl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ejashnknmw .gt_row {
+#inmoqlbrpl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -227,7 +227,7 @@ tags:
   overflow-x: hidden;
 }
 
-#ejashnknmw .gt_stub {
+#inmoqlbrpl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -239,7 +239,7 @@ tags:
   padding-left: 12px;
 }
 
-#ejashnknmw .gt_summary_row {
+#inmoqlbrpl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -249,7 +249,7 @@ tags:
   padding-right: 5px;
 }
 
-#ejashnknmw .gt_first_summary_row {
+#inmoqlbrpl .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -259,7 +259,7 @@ tags:
   border-top-color: #D3D3D3;
 }
 
-#ejashnknmw .gt_grand_summary_row {
+#inmoqlbrpl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -269,7 +269,7 @@ tags:
   padding-right: 5px;
 }
 
-#ejashnknmw .gt_first_grand_summary_row {
+#inmoqlbrpl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -279,7 +279,7 @@ tags:
   border-top-color: #D3D3D3;
 }
 
-#ejashnknmw .gt_table_body {
+#inmoqlbrpl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -288,7 +288,7 @@ tags:
   border-bottom-color: #D3D3D3;
 }
 
-#ejashnknmw .gt_footnotes {
+#inmoqlbrpl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -302,13 +302,13 @@ tags:
   border-right-color: #D3D3D3;
 }
 
-#ejashnknmw .gt_footnote {
+#inmoqlbrpl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#ejashnknmw .gt_sourcenotes {
+#inmoqlbrpl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -322,46 +322,46 @@ tags:
   border-right-color: #D3D3D3;
 }
 
-#ejashnknmw .gt_sourcenote {
+#inmoqlbrpl .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#ejashnknmw .gt_left {
+#inmoqlbrpl .gt_left {
   text-align: left;
 }
 
-#ejashnknmw .gt_center {
+#inmoqlbrpl .gt_center {
   text-align: center;
 }
 
-#ejashnknmw .gt_right {
+#inmoqlbrpl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ejashnknmw .gt_font_normal {
+#inmoqlbrpl .gt_font_normal {
   font-weight: normal;
 }
 
-#ejashnknmw .gt_font_bold {
+#inmoqlbrpl .gt_font_bold {
   font-weight: bold;
 }
 
-#ejashnknmw .gt_font_italic {
+#inmoqlbrpl .gt_font_italic {
   font-style: italic;
 }
 
-#ejashnknmw .gt_super {
+#inmoqlbrpl .gt_super {
   font-size: 65%;
 }
 
-#ejashnknmw .gt_footnote_marks {
+#inmoqlbrpl .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="ejashnknmw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="inmoqlbrpl" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -541,7 +541,7 @@ tags:
 <p>I used a data-driven technique called <a href="https://en.wikipedia.org/wiki/Hierarchical_clustering"><em>hierarchical clustering</em></a> and grouped the states and regions. It is an iterative process in which highly connected nodes are merged together using fast-greedy algorithm. Through this process, the group membership is determined by maximising the node connectedness within the group while minimising the connectedness between the groups.</p>
 <p>Two groups of states/regions emerged from this analysis. Interestingly, the states/regions in each group were geographically proximal to each together with one group located in the south around the coastal region and the other located in-land in the north.</p>
 <p>This grouping pattern is robust and consistent in both networks, in overall analysis and in subgroup analysis by sex (results not shown).</p>
-<p><img src="/post/2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions_files/figure-html/unnamed-chunk-4-1.png" width="864" /></p>
+<p><img src="/post/2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions_files/map_group.png" style="width:60.0%" /></p>
 <p>According to the main census report, most people appear to move for economic reasons; 41% of migrants (majority were women) cited following families and 34% (mostly men) cited employment as the main reasons (See the plot below). Therefore, the two distinct migration patterns may suggest distinct ways of organising the economy. More data are necessary to look at this further.</p>
 <div class="figure">
 <img src="/post/2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions_files/census_2014_reasons_for_migration.png" alt="" />

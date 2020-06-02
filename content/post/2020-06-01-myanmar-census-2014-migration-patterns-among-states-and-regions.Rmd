@@ -20,10 +20,10 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, echo = FALS
 library(tidyverse)
 library(readxl)
 library(tidygraph)
-library(cowplot)
-library(sf)
-library(ggraph)
-library(tmap)
+# library(cowplot)
+# library(sf)
+# library(ggraph)
+# library(tmap)
 library(gt)
 ```
 
@@ -44,8 +44,16 @@ Both networks were completely connected as population movements happened across 
 Below are network representations in which I used circles and arrows to represent nodes and edges, respectively. The node size corresponds to their migratory flux values. The node colour represents the group the node belongs to based on a grouping algorithm (See below for more details). The edge width represents the volume of migrants and their colours are the same as the nodes they emerge from. For clarity, colours were added only to the edges that represents 50,000 or more migrants. All other edges were gray-ed.  
 
 ```{r recent_data}
-recent_move <- read_excel(here::here("data", "census_2014_main_report", "union_eng_group_c.xlsx"),
-                   sheet = "Table C-2", skip = 3)
+recent_move <- read_excel(
+  here::here(
+    "data",
+    "2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions",
+    "census_2014_main_report",
+    "union_eng_group_c.xlsx"
+  ),
+  sheet = "Table C-2",
+  skip = 3
+)
 
 current_residence <- recent_move %>%
   filter(is.na(Total)) %>%
@@ -117,8 +125,16 @@ recent_all_new <- recent_all %>%
 ```
 
 ```{r birth_data}
-birth_move <- read_excel(here::here("data", "census_2014_main_report", "union_eng_group_c.xlsx"),
-                   sheet = "Table C-1", skip = 3)
+birth_move <- read_excel(
+  here::here(
+    "data",
+    "2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions",
+    "census_2014_main_report",
+    "union_eng_group_c.xlsx"
+  ),
+  sheet = "Table C-1",
+  skip = 3
+)
 
 current_residence <- birth_move %>%
   filter(is.na(Total)) %>%
@@ -190,7 +206,7 @@ birth_all_new <- birth_all %>%
 ```
 
 
-```{r fig.width = 7, fig.height = 15}
+```{r eval = FALSE}
 edge_col <- c("#7EA8CC", "#CC817E", "gray90")
 my_col <- edge_col[-3]
 options("scipen" = 100, "digits" = 4)
@@ -263,8 +279,11 @@ p <- plot_grid(p1, p2, ncol = 1,
 title <- ggdraw() +
   draw_label("Network representation of population migration between states/regions:\n(A) From previous residence to usual residence; (B) From birth place\nto usual residence", vjust = 0)
 
-plot_grid(p, title, ncol = 1, rel_heights = c(1, 0.05))
+p_save <- plot_grid(p, title, ncol = 1, rel_heights = c(1, 0.05))
+cowplot::save_plot(here::here("output", "graphs", "network.png"), p_save, base_width = 7, base_height = 15)
 ```
+
+![](/post/2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions_files/network.png)
 
 Migration patterns of both networks were very similar with almost identical main features. In both networks, Yangon received the highest volume of migrants from many states and region with most migrants moved from Ayeyawady and Bago regions. Top three states/regions with the highest influx of migrants were Yangon, Mandalay, and Shan while the top three with the highest outflow were Ayeyawady, Bago, and Mandalay. Migratory flux is highest in Yangon, Kayin, and Nay Pyi Taw and lowest in Ayeyawady, Chin, and Magway.  
 
@@ -325,7 +344,7 @@ Two groups of states/regions emerged from this analysis. Interestingly, the stat
 
 This grouping pattern is robust and consistent in both networks, in overall analysis and in subgroup analysis by sex (results not shown).    
 
-```{r fig.width = 9, fig.asp = 1}
+```{r eval = FALSE}
 recent_all_community <- recent_all_community %>%
   mutate(name = ifelse(name == "Ayeyawady", "Ayeyarwady", name))
 
@@ -340,12 +359,22 @@ mmr_sr <- st_read(
   left_join(recent_all_community, by = c("ST" = "name")) %>%
   mutate(community_col = ifelse(community == 1, "#7EA8CC", "#CC817E"))
 
-tm_shape(mmr_sr) +
+map <- tm_shape(mmr_sr) +
   tm_polygons(col = "community_col") +
   tm_text(text = "ST",
           size = 0.5,
-          fontface = "bold")
+          fontface = "bold") +
+  tm_layout(frame = FALSE)
+
+tmap_save(
+  map,
+  here::here("output", "graphs", "map_group.png"),
+  width = 4,
+  units = "in"
+)
 ```
+
+![](/post/2020-06-01-myanmar-census-2014-migration-patterns-among-states-and-regions_files/map_group.png){width=60%}
 
 According to the main census report, most people appear to move for economic reasons; 41% of migrants (majority were women) cited following families and 34% (mostly men) cited employment as the main reasons (See the plot below). Therefore, the two distinct migration patterns may suggest distinct ways of organising the economy. More data are necessary to look at this further.  
 
