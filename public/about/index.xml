@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Abouts on Zaw Myo Tun</title>
+    <title>Abouts on Epiblog</title>
     <link>/about/</link>
-    <description>Recent content in Abouts on Zaw Myo Tun</description>
+    <description>Recent content in Abouts on Epiblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/about/about/</guid>
-      <description>I am an epidemiologist from Myanmar and currently based in Singapore. This is my personal blog to share some data analysis work and reflection.</description>
+      <description>My name is Zaw Myo Tun. I am a medically trained epidemiologist from Myanmar. I am currently based in Singapore. This is my personal blog to share some data analysis work and reflection.</description>
     </item>
     
   </channel>

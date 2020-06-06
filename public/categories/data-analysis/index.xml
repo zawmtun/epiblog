@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data analysis on Zaw Myo Tun</title>
+    <title>Data analysis on Epiblog</title>
     <link>/categories/data-analysis/</link>
-    <description>Recent content in Data analysis on Zaw Myo Tun</description>
+    <description>Recent content in Data analysis on Epiblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Migration patterns among states and regions in Myanmar: network analysis using census data</title>
+      <title>Migration patterns among states and regions in Myanmar: a network analysis using census data</title>
       <link>/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       

@@ -1,5 +1,5 @@
 ---
-title: 'Migration patterns among states and regions in Myanmar: network analysis using census data'
+title: 'Migration patterns among states and regions in Myanmar: a network analysis using census data'
 author: Zaw Myo Tun
 date: '2020-06-01'
 slug: myanmar-census-2014-migration-patterns-among-states-and-regions
@@ -17,7 +17,9 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, echo = FALS
 ```
 
 ```{r}
-library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(purrr)
 library(readxl)
 library(tidygraph)
 # library(cowplot)

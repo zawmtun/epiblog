@@ -1,7 +1,7 @@
 theme = "tale-hugo"
 baseURL = "https://zawmyotun.netlify.app"
 languageCode = "en-us"
-title = "Zaw Myo Tun"
+title = "Epiblog"
 paginate = 5
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
@@ -13,26 +13,32 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/about/about"
     weight = 1
   [[menu.main]]
+    identifier = "email"
+    name = "Email"
+    title = "Email"
+    url = "mailto:zawmyotun11@gmail.com"
+    weight = 2
+  [[menu.main]]
     identifier = "posts"
     name = "Posts"
     title = "Posts"
     url = "/post/"
-    weight = 2
+    weight = 3
   [[menu.main]]
     identifier = "github"
     name = "GitHub"
     title = "GitHub"
     url = "https://github.com/zawmtun"
-    weight = 3
+    weight = 4
   [[menu.main]]
     identifier = "twitter"
     name = "Twitter"
     title = "Twitter"
     url = "https://twitter.com/zawmtun"
-    weight = 4
+    weight = 5
   [[menu.main]]
     identifier = "linkedin"
     name = "LinkedIn"
     title = "LinkedIn"
     url = "https://linkedin.com/in/zawmyotun11"
-    weight = 5
+    weight = 6

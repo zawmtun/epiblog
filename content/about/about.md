@@ -8,6 +8,6 @@ title: About me
 hidden: "true"
 ---
 
-I am an epidemiologist from Myanmar and currently based in Singapore. This is my personal blog to share some data analysis work and reflection.
+My name is Zaw Myo Tun. I am a medically trained epidemiologist from Myanmar. I am currently based in Singapore. This is my personal blog to share some data analysis work and reflection.
 
 

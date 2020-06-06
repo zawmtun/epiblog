@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Zaw Myo Tun</title>
+    <title>Epiblog</title>
     <link>/</link>
-    <description>Recent content on Zaw Myo Tun</description>
+    <description>Recent content on Epiblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Migration patterns among states and regions in Myanmar: network analysis using census data</title>
+      <title>Migration patterns among states and regions in Myanmar: a network analysis using census data</title>
       <link>/post/myanmar-census-2014-migration-patterns-among-states-and-regions/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -27,7 +27,7 @@ In this analysis, I looked at migration between states and regions. Myanmar is a
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/about/about/</guid>
-      <description>I am an epidemiologist from Myanmar and currently based in Singapore. This is my personal blog to share some data analysis work and reflection.</description>
+      <description>My name is Zaw Myo Tun. I am a medically trained epidemiologist from Myanmar. I am currently based in Singapore. This is my personal blog to share some data analysis work and reflection.</description>
     </item>
     
   </channel>
